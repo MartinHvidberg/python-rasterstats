@@ -26,8 +26,8 @@ class Timer():
     def __exit__(self, *args):
         print("Time:", time.time() - self.start)
 
-countries = "./benchmark_data/ne_50m_admin_0_countries.shp"
-elevation = "./benchmark_data/SRTM_1km.tif"
+countries = "../benchmark_data/ne_50m_admin_0_countries.shp"
+elevation = "../benchmark_data/srtm30plus-na_pctshade.tif" # SRTM_1km.tif"
 
 with Timer():
     stats = zonal_stats(countries, elevation, stats="*")
